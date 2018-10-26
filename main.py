@@ -6,6 +6,7 @@
 
 import requests
 from google.cloud import storage
+import logging
 import os
 
 
@@ -50,10 +51,10 @@ def file_upload_pubsub_handle(data, context):
     print('Metageneration: {}'.format(data['metageneration']))
     print('Created: {}'.format(data['timeCreated']))
     print('Updated: {}'.format(data['updated']))
+    logging.info(data)
 
 
 # In[134]:
 
 
 #call_ocr_from_pubsub('image.jpg')
-
